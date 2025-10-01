@@ -11,11 +11,11 @@ export default function Layout({ children }) {
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col ">
+      {/* Main Content - Added left margin for desktop */}
+      <div className="flex-1 flex flex-col lg:ml-30">
         <Header onMenuClick={() => setSidebarOpen(true)} />
-        <main className="flex-1 p-4 lg:p-6">
-          <div className="max-w-7xl ">
+        <main className="flex-1 p-2 lg:p-4">
+          <div className="max-w-7xl mx-auto w-full">
             {/* {children} */}
             <Outlet/>
           </div>

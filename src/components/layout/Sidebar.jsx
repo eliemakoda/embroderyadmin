@@ -24,8 +24,8 @@ const navigation = [
   { name: 'Équipe', href: '/team', icon: Users },
   { name: 'Utilisateurs', href: '/users', icon: User2 },
   { name: 'Nous contacter', href: '/contact-us', icon: PhoneMissed },
-  { name: 'Paramètres', href: '/settings', icon: Settings },
-  { name: 'Aide', href: '/help', icon: HelpCircle },
+  // { name: 'Paramètres', href: '/settings', icon: Settings },
+  // { name: 'Aide', href: '/help', icon: HelpCircle },
 ];
 
 export default function Sidebar({ isOpen, onClose }) {
@@ -33,18 +33,15 @@ export default function Sidebar({ isOpen, onClose }) {
 
   return (
     <>
-      {/* Desktop sidebar */}
-      <div className="hidden lg:flex lg:flex-shrink-0">
-        <div className="flex flex-col w-64">
-          <div className="flex flex-col h-0 flex-1 bg-surface-50 border-r border-surface-300 shadow-lg">
+      {/* Desktop sidebar - now fixed and positioned properly */}
+      <div className="hidden lg:block fixed left-0 top-0 h-full w-64 z-30">
+        <div className="flex flex-col h-full">
+          <div className="flex flex-col h-full bg-surface-50 border-r border-surface-300 shadow-lg">
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
               <div className="flex items-center flex-shrink-0 px-6">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center">
-                    <Scissors className="w-6 h-6 text-white" />
-                  </div>
+                
                   <div>
-                    <h1 className="text-xl font-bold text-surface-900">EmbCraft</h1>
                     <p className="text-xs text-surface-600">Tableau de bord administrateur</p>
                   </div>
                 </div>
