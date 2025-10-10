@@ -38,7 +38,7 @@ function AppRoutes() {
     <Routes>
       {/* Public routes */}
       <Route
-        path="/login"
+        path="/admin/login"
         element={
           user ? (
             <Navigate to={location.state?.from || "/dashboard"} replace />
@@ -54,39 +54,38 @@ function AppRoutes() {
           user ? (
             <Layout />
           ) : (
-            <Navigate to="/login" replace state={{ from: location.pathname }} />
+            <Navigate to="/admin/login" replace state={{ from: location.pathname }} />
           )
         }
       >
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/tutorials" element={<TutorialList />} />
-        <Route path="/tutorials/create" element={<TutorialCreate />} />
-        <Route path="/tutorials/:id/edit" element={<TutorialEdit />} />
-        <Route path="/tutorials/:id" element={<TutorialView />} />
-        <Route path="/products" element={<ProductList />} />
-        <Route path="/product/add" element={<ProductCreate />} />
-        <Route path="/gallery" element={<GalleryList />} />
-        <Route path="/admin/galleries/edit/:id" element={<UpdateGallery />} />
-        <Route path="/admin/galleries/add" element={<CreateGallery />} />
-        <Route path="/categories" element={<CategoryList />} />
-        <Route path="/services" element={<Service />} />
-        <Route path="/admin/services/new" element={<AddService />} />
-        <Route path="/admin/categories/new" element={<CreateCategory />} />
-        <Route path="/team" element={<TeamList />} />
-        <Route path="/users" element={<UserList />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        {/* Root path redirects to dashboard */}
-        <Route path="/" element={<Navigate to="/dashboard" replace />} />
+        <Route path="/admin/dashboard" element={<Dashboard />} index />
+        <Route path="/admin/tutorials" element={<TutorialList />} />
+        <Route path="/admin/tutorials/create" element={<TutorialCreate />} />
+        <Route path="/admin/tutorials/:id/edit" element={<TutorialEdit />} />
+        <Route path="/admin/tutorials/:id" element={<TutorialView />} />
+        <Route path="/admin/products" element={<ProductList />} />
+        <Route path="/admin/product/add" element={<ProductCreate />} />
+        <Route path="/admin/gallery" element={<GalleryList />} />
+        <Route path="/admin/admin/galleries/edit/:id" element={<UpdateGallery />} />
+        <Route path="/admin/admin/galleries/add" element={<CreateGallery />} />
+        <Route path="/admin/categories" element={<CategoryList />} />
+        <Route path="/admin/services" element={<Service />} />
+        <Route path="/admin/admin/services/new" element={<AddService />} />
+        <Route path="/admin/admin/categories/new" element={<CreateCategory />} />
+        <Route path="/admin/team" element={<TeamList />} />
+        <Route path="/admin/users" element={<UserList />} />
+        <Route path="/admin/contact-us" element={<ContactUs />} />
+        <Route path="/admin/" element={<Navigate to="/admin/dashboard" replace />} />
       </Route>
 
       {/* Catch-all route for invalid paths */}
       <Route
-        path="*"
+        path="/admin/*"
         element={
           user ? (
-            <Navigate to="/dashboard" replace />
+            <Navigate to="/admin/dashboard" replace />
           ) : (
-            <Navigate to="/login" replace state={{ from: location.pathname }} />
+            <Navigate to="/admin/login" replace state={{ from: location.pathname }} />
           )
         }
       />

@@ -32,7 +32,7 @@ export default function Header({ onMenuClick }) {
 
   const handleLogout = () => {
     logout();
-    navigate("/login");
+    navigate("/admin/login");
   };
 
   return (

@@ -519,7 +519,7 @@ const CreateProduct = () => {
       if (response.data.success) {
         setSuccessMessage("Produit créé avec succès!");
         setTimeout(() => {
-          navigate("/products");
+          navigate("/admin/products");
         }, 2000);
       }
     } catch (error) {
@@ -582,7 +582,7 @@ const CreateProduct = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <button
-            onClick={() => navigate("/produits")}
+            onClick={() => navigate("/admin/produits")}
             className="flex items-center text-primary-600 hover:text-primary-700 mb-4 transition-colors"
           >
             <ArrowLeft size={20} className="mr-2" />
@@ -1526,7 +1526,7 @@ const CreateProduct = () => {
             <div className="flex space-x-4">
               <button
                 type="button"
-                onClick={() => navigate("/produits")}
+                onClick={() => navigate("/admin/produits")}
                 className="px-6 py-3 border border-surface-300 text-background-700 rounded-lg hover:bg-background-50 transition-colors"
               >
                 Annuler

@@ -22,7 +22,6 @@ export default function UpdateTutorial() {
   const [success, setSuccess] = useState(false);
   const [tutorialId, setTutorialId] = useState('');
 
-  const API_BASE_URL = 'http://localhost:3000/api';
   const token = localStorage.getItem('adminToken');
 
   useEffect(() => {
@@ -41,11 +40,7 @@ export default function UpdateTutorial() {
   const fetchTutorial = async (id) => {
     setFetching(true);
     try {
-      const response = await axios.get(`${API_BASE_URL}/tutorials/${id}`, {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      });
+      const response = await axios.get(`/tutorials/${id}`);
 
       if (response.data.success) {
         const data = response.data.data;
@@ -67,7 +62,7 @@ export default function UpdateTutorial() {
           stepNumber: step.stepNumber,
           title: step.title,
           description: step.description,
-          imageUrl: step.imageUrl ? `${API_BASE_URL.replace('/api', '')}${step.imageUrl}` : '',
+          imageUrl: step.imageUrl??"",
           imageFile: null,
           videoUrl: step.videoUrl || '',
           tips: step.tips || '',
@@ -221,7 +216,7 @@ export default function UpdateTutorial() {
         }
       });
 
-      const response = await axios.put(`${API_BASE_URL}/tutorials/${tutorialId}`, formData, {
+      const response = await axios.put(`/tutorials/${tutorialId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}`

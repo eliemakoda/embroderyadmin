@@ -94,7 +94,7 @@ French knots might seem tricky at first, but with practice, they become second n
       setTutorial(mockTutorial);
     } catch (error) {
       toast.error('Failed to load tutorial');
-      navigate('/tutorials');
+      navigate('/admin/tutorials');
     } finally {
       setLoading(false);
     }
@@ -106,7 +106,7 @@ French knots might seem tricky at first, but with practice, they become second n
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast.success('Tutorial deleted successfully');
-      navigate('/tutorials');
+      navigate('/admin/tutorials');
     } catch (error) {
       toast.error('Failed to delete tutorial');
     }

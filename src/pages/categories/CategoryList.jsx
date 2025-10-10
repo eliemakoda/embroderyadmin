@@ -31,7 +31,7 @@ const AdminCategories = () => {
 
   // Handle edit
   const handleEdit = (categoryId) => {
-    navigate(`/admin/categories/edit/${categoryId}`);
+    navigate(`/admin/admin/categories/edit/${categoryId}`);
   };
 
   // Handle delete confirmation
@@ -55,7 +55,7 @@ const AdminCategories = () => {
 
   // Handle add new category
   const handleAddNew = () => {
-    navigate('/admin/categories/new');
+    navigate('/admin/admin/categories/new');
   };
 
   // Format date

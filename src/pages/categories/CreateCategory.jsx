@@ -99,7 +99,7 @@ const CategoryNew = () => {
 
       const response = await axios.post('/categories', submitData);
 
-      navigate('/categories', { 
+      navigate('/admin/categories', { 
         state: { message: 'Catégorie créée avec succès' } 
       });
 
@@ -115,7 +115,7 @@ const CategoryNew = () => {
   };
 
   const handleCancel = () => {
-    navigate('/categories');
+    navigate('/admin/categories');
   };
 
   return (

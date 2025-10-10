@@ -32,7 +32,7 @@ const ServicesAdmin = () => {
   }, []);
 
   const handleEdit = (serviceId) => {
-    navigate(`/admin/services/edit/${serviceId}`);
+    navigate(`/admin/admin/services/edit/${serviceId}`);
   };
 
   const handleDeleteClick = (service) => {
@@ -57,7 +57,7 @@ const ServicesAdmin = () => {
   };
 
   const handleAddNew = () => {
-    navigate('/admin/services/new');
+    navigate('/admin/admin/services/new');
   };
 
   if (loading) {

@@ -89,12 +89,12 @@ const ProductList = () => {
 
   // Redirection pour l'édition
   const handleEdit = (productId) => {
-    navigate(`/produits/editer/${productId}`);
+    navigate(`/admin/produits/editer/${productId}`);
   };
 
   // Redirection pour l'ajout
   const handleAdd = () => {
-    navigate("/product/add");
+    navigate("/admin/product/add");
   };
 
   // Formatage du prix

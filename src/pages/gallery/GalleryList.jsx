@@ -33,7 +33,7 @@ const AdminGalleries = () => {
 
   // Gérer la modification
   const handleEdit = (galleryId) => {
-    navigate(`/admin/galleries/edit/${galleryId}`);
+    navigate(`/admin/admin/galleries/edit/${galleryId}`);
   };
 
   // Gérer le modal de confirmation de suppression
@@ -170,7 +170,7 @@ const AdminGalleries = () => {
 
                 {/* Actions */}
                 <div className="flex space-x-2">
-                  <button
+                  {/* <button
                     onClick={() => handleEdit(gallery.id)}
                     className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-3 rounded-lg font-medium text-sm transition-colors duration-200 flex items-center justify-center space-x-1"
                   >
@@ -178,7 +178,7 @@ const AdminGalleries = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                     </svg>
                     <span>Modifier</span>
-                  </button>
+                  </button> */}
                   <button
                     onClick={() => handleDeleteClick(gallery)}
                     className="flex-1 bg-red-50 hover:bg-red-100 text-red-700 py-2 px-3 rounded-lg font-medium text-sm transition-colors duration-200 flex items-center justify-center space-x-1"

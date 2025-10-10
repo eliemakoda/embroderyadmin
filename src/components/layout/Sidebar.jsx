@@ -15,15 +15,15 @@ import {
 import { Link, useLocation } from 'react-router-dom';
 
 const navigation = [
-  { name: 'Tableau de bord', href: '/dashboard', icon: Home },
-  { name: 'Tutoriels', href: '/tutorials', icon: BookOpen },
-  { name: 'Galerie', href: '/gallery', icon: Image },
-  { name: 'Produits', href: '/products', icon: ShoppingBag },
-  { name: 'Catégories', href: '/categories', icon: Palette },
-  { name: 'Services', href: '/services', icon: Scissors },
-  { name: 'Équipe', href: '/team', icon: Users },
-  { name: 'Utilisateurs', href: '/users', icon: User2 },
-  { name: 'Nous contacter', href: '/contact-us', icon: PhoneMissed },
+  { name: 'Tableau de bord', href: '/admin/dashboard', icon: Home },
+  { name: 'Tutoriels', href: '/admin/tutorials', icon: BookOpen },
+  { name: 'Galerie', href: '/admin/gallery', icon: Image },
+  { name: 'Produits', href: '/admin/products', icon: ShoppingBag },
+  { name: 'Catégories', href: '/admin/categories', icon: Palette },
+  { name: 'Services', href: '/admin/services', icon: Scissors },
+  { name: 'Équipe', href: '/admin/team', icon: Users },
+  // { name: 'Utilisateurs', href: '/admin/users', icon: User2 },
+  { name: 'Nous contacter', href: '/admin/contact-us', icon: PhoneMissed },
   // { name: 'Paramètres', href: '/settings', icon: Settings },
   // { name: 'Aide', href: '/help', icon: HelpCircle },
 ];
@@ -83,7 +83,7 @@ export default function Sidebar({ isOpen, onClose }) {
                 <Scissors className="w-4 h-4 text-white" />
               </div>
               <div>
-                <h1 className="text-lg font-bold text-surface-900">EmbCraft</h1>
+                <h1 className="text-lg font-bold text-surface-900">Monchoix</h1>
                 <p className="text-xs text-surface-600">Tableau de bord administrateur</p>
               </div>
             </div>

@@ -143,7 +143,7 @@ const ServiceCreate = () => {
       const response = await axios.post("/services", submitData);
 
       if (response.data.success) {
-        navigate("/admin/services", {
+        navigate("/admin/admin/services", {
           state: { message: "Service créé avec succès" },
         });
       }
@@ -160,7 +160,7 @@ const ServiceCreate = () => {
   };
 
   const handleCancel = () => {
-    navigate("/admin/services");
+    navigate("/admin/admin/services");
   };
 
   return (

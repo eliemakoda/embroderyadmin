@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CryptoJS from "crypto-js";
@@ -153,7 +152,7 @@ export const AuthProvider = ({ children }) => {
     try {
       console.log("Session expired. Please log in again.");
       clearAuthData();
-      navigate("/login", {
+      navigate("/admin/login", {
         replace: true,
         state: { message: "Your session has expired. Please log in again." },
       });
@@ -186,7 +185,7 @@ export const AuthProvider = ({ children }) => {
           isLoading: false,
         });
 
-        navigate("/");
+        navigate("/admin");
 
         return {
           success: true,
@@ -231,7 +230,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     clearAuthData();
-    navigate("/login");
+    navigate("/admin/login");
   };
 
   const clearAuthData = () => {
